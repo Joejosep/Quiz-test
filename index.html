@@ -13,9 +13,9 @@
         <h1>HTML/CSS QUIZ</h1>
         <nav>
             <ul>
-                <li><a href="">INFO</a></li>
-                <li><a href="">HTML</a></li>
-                <li><a href="">CSS</a></li>
+                <li><a href="#student-info">INFO</a></li>
+                <li><a href="#html-questions">HTML</a></li>
+                <li><a href="#css-questions">CSS</a></li>
             </ul>
         </nav>
     </header>
@@ -23,14 +23,59 @@
        <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
             <section role="region" aria-labelledby="student-info">
                 <h2 id="student-info">Student Info</h2>
+                <div class="info">
+                    <label for="name">Student Name:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+
+                <div class="info">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="info">
+                    <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+                    <input type="date" id="birth-date" name="date">
+                </div>
             </section>
 
             <section role="region" aria-labelledby="html-questions">
                 <h2 id="html-questions">Html Questions</h2>
+                <div class="question-block">
+                    <h3>1</h3>
+                    <fieldset class="question" name="first-question">
+                        <Legend>Attributes provide additional information about elements</Legend>
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q1-a1"><input type="radio" id="q1-a1" value="true" name="q1-a">True</label>
+                            </li>
+
+                            <li>
+                                <label for="q1-a2"><input type="radio" id="q1-a2" value="false" name="q1-a">False</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+
+                <div class="question-block">
+                    <h3>2</h3>
+                    <fieldset class="question" name="second-question">
+                        <Legend>The <Strong>label element</Strong> in HTML is used to create a form for collecting user input</Legend>
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q2-a1"><input type="radio" id="q2-a1" value="true" name="q2-a">True</label>
+                            </li>
+
+                            <li>
+                                <label for="q2-a2"><input type="radio" id="q2-a2" value="false" name="q2-a">False</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
             </section>
 
             <section role="region" aria-labelledby="css-questions">
-                <h2 id="css-questions">CSS questions</h2>
+                <h2 id="css-questions">CSS Questions</h2>
             </section>
        </form>
     </main>
